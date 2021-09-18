@@ -1,0 +1,26 @@
+
+$green: #00ffea;
+$pink: #ff0084;
+$black: #212121;
+$white: #fff;
+
+//font-family
+@font-face {
+    font-family: mainFont;
+    src: url('resources/fonts/UTM\ AVO.TTF');
+}
+
+@font-face {
+    font-family: mainItalicFont;
+    src: url('resources/fonts/UTM\ AVOITALIC.TTF');
+}
+
+@font-face {
+    font-family: mainBoldFont;
+    src: url('resources/fonts/UTM\ AVOBOLD.TTF');
+}
+
+@font-face {
+    font-family: mainBoldItalicFont;
+    src: url('resources/fonts/UTM\ AVOBOLD_ITALIC.TTF');
+}
