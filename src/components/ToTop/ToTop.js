@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { MdKeyboardArrowUp } from 'react-icons/md';
 import { animateScroll as scroll } from 'react-scroll';
 
 import './ToTop.scss'
@@ -17,7 +18,7 @@ function ToTop() {
     };
 
     const handleScrollToTop = () => {
-        scroll.scrollToTop({duration: 50})
+        scroll.scrollToTop({duration: 50, smooth: true})
     }
 
     useEffect(() => {
@@ -27,7 +28,7 @@ function ToTop() {
     return (
         <>
         { visible && <div className="scroll-to-top" onClick={handleScrollToTop} ref={toTopRef}>
-            
+            <MdKeyboardArrowUp/>
         </div>}
         </>
     )
