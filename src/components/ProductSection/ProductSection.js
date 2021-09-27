@@ -1,27 +1,53 @@
-import React from 'react'
-import product from 'resources/images/product.jpg'
+import HotProduct from 'components/HotProduct/HotProduct'
+import Product from 'components/Product/Product'
+import Product2 from 'components/Product/Product2'
+import React, { useState, useEffect } from 'react'
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
+import { Element } from 'react-scroll'
 import './ProductSection.scss'
 
 function ProductSection() {
+
+    const [current, setCurrent] = useState(0)
+
+    const handleNext = () => {
+
+        let clone = current+1
+        if(clone > 2)
+            clone = 0
+        setCurrent(clone)
+    }
+
+    const handlePrev = () => {
+
+        let clone = current-1
+        if(clone < 0)
+            clone = 2
+        setCurrent(clone)
+    }
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            let clone = current+1
+            if(clone > 2)
+                clone = 0
+            setCurrent(clone)
+        }, 2500)
+
+        return () => clearInterval(timer)
+    },[current])
+
     return (
-        <div className="product-section">
+        <Element name="products" className="product-section">
             <h1>SẢN PHẨM</h1>
             <div className="product-section-container">
-                <div className="hot-title-product">
-                    <div className="hot-title-product-content">
-                        <span>1 HỘP 4 VIÊN</span>
-                        <span>4 NGƯỜI DÙNG</span>
-                    </div>
-                </div>
-                <div className="hot-product">
-                    <img src={product} alt="relax monkey"/>
-                    <div className="product-name">
-                        <span>VANI MILK</span>
-                        <span>CHOCOLATE</span>
-                    </div>
-                </div>
+                {current === 2 && <Product2/>}
+                {current === 1 && <Product/>}
+                {current === 0 && <HotProduct/>}
+                <MdKeyboardArrowLeft className="arrow-1" onClick={handlePrev}/>
+                <MdKeyboardArrowRight className="arrow-2" onClick={handleNext}/>
             </div>
-        </div>
+        </Element>
     )
 }
 

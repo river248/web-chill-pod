@@ -3,6 +3,7 @@ $green: #00ffea;
 $pink: #ff0084;
 $black: #212121;
 $white: #fff;
+$yellow: #dddbce;
 
 //font-family
 @font-face {
@@ -23,4 +24,44 @@ $white: #fff;
 @font-face {
     font-family: mainBoldItalicFont;
     src: url('resources/fonts/UTM\ AVOBOLD_ITALIC.TTF');
+}
+
+//animation
+
+@keyframes slideAppear {
+    0% { 
+        transform: translateY(-100%) scale(0.5); 
+        box-shadow: 0 0 10px rgba($black, 0.7);
+        }
+    50% {
+        transform: scale(0.8);
+        box-shadow: 0 0 10px rgba($black, 0.8);
+    }
+
+    100% { 
+        transform: translateY(0%) scale(1);
+        box-shadow: unset;
+    }
+}
+
+@keyframes slideDisappear {
+    0% { 
+        transform: translateY(0%) scale(1); 
+        box-shadow: 0 0 10px rgba($black, 0.7);
+        }
+    50% {
+        transform: scale(0.8);
+        box-shadow: 0 0 10px rgba($black, 0.8);
+    }
+
+    100% { 
+        transform: translateY(calc(100% + 20px)) scale(0.5);
+        box-shadow: unset;
+    }
+}
+
+@keyframes slideLTR {
+    0% {transform: translateX(-100%); opacity: 0;}
+    50% {transform: translateX(5%); opacity: 0.7;}
+    100% {transform: translateX(2%); opacity: 1;}
 }

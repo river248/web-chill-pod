@@ -4,13 +4,14 @@ import {
   Route,
 } from "react-router-dom"
 
-import Header from 'components/Header/Header'
 import Navigation from 'components/Navigation/Navigation'
 import ToTop from 'components/ToTop/ToTop'
 import './App.scss'
 import Home from "components/Home/Home"
 import ProductSection from "components/ProductSection/ProductSection"
 import ScrollToTop from "utils/ScrollToTop"
+import News from "components/News/News"
+import Contact from "components/Contact/Contact"
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
               <Navigation/>
               <Home/>
               <ProductSection/>
+              <News/>
+              <Contact/>
             </Route>
           </Switch>
         </ScrollToTop>
