@@ -78,7 +78,7 @@ function Contact() {
                 <div className="contact-info">
                     <span>RELAX STORE</span>
                     <span>THÔNG TIN LIÊN HỆ</span>
-                    <span>SĐT: 02229999886 - 02229999993</span>
+                    <span>SĐT: 02229999886 - 02229999933</span>
                     <span>Email: monkeychill2021@gmail.com</span>
                 </div>
             </div>
