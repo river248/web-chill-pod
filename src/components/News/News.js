@@ -1,6 +1,6 @@
 import React from 'react'
 import { Element } from 'react-scroll'
-import product from 'resources/images/product.jpg'
+import PriceList from 'resources/images/PriceList.jpg'
 import relax from 'resources/images/white-relax.png'
 import './News.scss'
 
@@ -9,7 +9,7 @@ function News() {
         <Element name="news" className="news">
             <h1>TIN TỨC</h1>
             <div className="news-container">
-                <img src={product} alt="relax monkey"/>
+                <img src={PriceList} alt="Price List"/>
                 <div className="news-table">
                     <div className="news-row row-1">
                         <span>OPEN ORDER VER 3</span>
