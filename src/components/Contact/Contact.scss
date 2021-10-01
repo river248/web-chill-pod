@@ -3,7 +3,6 @@
 .contact {
     position: relative;
     height: 100vh;
-    background-color: aqua;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,7 +24,14 @@
     }
 
     .contact-library-slider {
-        display: none;
+        width: 100%;
+        margin: auto;
+        img {
+            width: 300px;
+            margin: 0 auto 20px auto;
+            box-shadow: 8px 6px 10px rgba($black, $alpha: 0.7);
+
+        }
     }
 
     h1 {
@@ -107,18 +113,6 @@
 
         .contact-library {
             display: none;
-        }
-
-        .contact-library-slider {
-            display: block;
-            width: 100%;
-            margin: auto;
-            img {
-                width: 300px;
-                margin: 0 auto 20px auto;
-                box-shadow: 8px 6px 10px rgba($black, $alpha: 0.7);
-
-            }
         }
 
         .footer-contact {

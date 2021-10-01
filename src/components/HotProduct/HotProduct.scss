@@ -9,33 +9,6 @@
     animation: slideAppear 0.8s ease-in-out forwards;
     // transform: translateY(calc(-100% - 20px));
 
-    .hot-title-product {
-        width: calc(100% - 57vw);
-        height: calc(10% + 24vw);
-        position: relative;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        .hot-title-product-content {
-            position: absolute;
-            bottom: calc(6% + 1.5vw);
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            font-family: mainBoldItalicFont;
-            font-size: calc(10px + 1.5vw);
-            line-height: calc(10px + 2vw);
-            width: calc(10% + 20vw);
-            color: $white;
-            text-shadow: 0 0 15px $white;
-        }
-    }
-
     .hot-product {
         width: calc(100% - 48vw);
         height: auto;
@@ -79,13 +52,6 @@
 
     .product-container {
 
-        .hot-title-product {
-            width: calc(100% - 52vw);
-            .hot-title-product-content {
-                font-size: calc(10px + 1vw);
-                line-height: calc(10px + 1.5vw);
-            }
-        }
         .hot-product {
             width: calc(100% - 44vw);
             .product-name {
@@ -103,15 +69,7 @@
         padding-top: 20px;
         justify-content: center;
         padding-bottom: 50px;
-        .hot-title-product {
-            width: calc(100% - 38vw);
-            height: calc(10% + 33vw);
-            .hot-title-product-content {
-                width: calc(28% + 20vw);
-                font-size: calc(10px + 1.5vw);
-                line-height: calc(10px + 2vw);
-            }
-        }
+
         .hot-product {
             width: calc(100% - 30vw);
             .product-name {
@@ -129,14 +87,6 @@
 
     .product-container {
 
-        .hot-title-product {
-            width: calc(100% - 36vw);
-            height: calc(10% + 40vw);
-            
-            .hot-title-product-content {
-                width: calc(28% + 37vw);
-            }
-        }
         .hot-product {
             width: calc(100% - 17vw);
 
